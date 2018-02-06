@@ -28,7 +28,7 @@ namespace z0r_scr
 
                 if (firstArgument == "/c")           // Configuration mode
                 {
-                    // TODO
+                    Application.Run(new SettingsForm());
                 }
                 else if (firstArgument == "/p")      // Preview mode
                 {

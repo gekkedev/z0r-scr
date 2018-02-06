@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.linklabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // webBrowser1
@@ -42,12 +43,24 @@
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             // 
+            // linklabel
+            // 
+            this.linklabel.AutoSize = true;
+            this.linklabel.BackColor = System.Drawing.Color.White;
+            this.linklabel.Location = new System.Drawing.Point(0, 0);
+            this.linklabel.Margin = new System.Windows.Forms.Padding(0);
+            this.linklabel.Name = "linklabel";
+            this.linklabel.Size = new System.Drawing.Size(41, 13);
+            this.linklabel.TabIndex = 1;
+            this.linklabel.Text = "loading";
+            // 
             // scrForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(643, 443);
+            this.Controls.Add(this.linklabel);
             this.Controls.Add(this.webBrowser1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -59,12 +72,14 @@
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.scrForm_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.scrForm_MouseMove);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label linklabel;
     }
 }
 
